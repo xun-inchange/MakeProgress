@@ -1,4 +1,4 @@
-create table IF NOT EXISTS "blog_tag"(
+create table IF NOT EXISTS `blog_tag`(
     `id` int(10) unsigned not null auto_increment,
     `name` varchar(100) default '' comment '标签名称',
     `created_on` int(10) unsigned default '0' comment '创建人',
@@ -9,7 +9,7 @@ create table IF NOT EXISTS "blog_tag"(
     primary key (`id`)
 )engine=innoDB default charset=utf8 comment='文章标签管理';
 
-create table IF NOT EXISTS O`blog_article`(
+create table IF NOT EXISTS `blog_article`(
     `id` int(10) unsigned not null auto_increment,
     `tag_id` int(10) unsigned default '0' comment '标签ID',
     `title` varchar(100) default '' comment '文章标题',
@@ -23,10 +23,9 @@ create table IF NOT EXISTS O`blog_article`(
     primary key(`id`)
 )engine=innoDB default charset=utf8 comment='文章管理';
 
-CREATE TABLE `blog_auth`(
+CREATE TABLE IF not exists `blog_auth`(
     `id` int(10) unsigned not null auto_increment,
     `username` varchar(50) default '' comment '账号',
     `password` varchar(50) default '' comment '密码',
     primary key (`id`)
 )engine=innoDB default charset=utf8;
-insert into `blog`.`bolg_auth`(`id`,`username`,`password`)values (null ,'test','test123456');
