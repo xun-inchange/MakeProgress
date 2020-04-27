@@ -1,0 +1,5 @@
+1.struct实例也不可以比较，因为struct是指针类型
+2.select 可以用于gorotine的完美退出。select就是监听操作，当IO操作
+  发生时，触发相应的动作，每个case语句必须是一个IO操作。确切的，应
+  该是一个面向channel的IO操作
+3.go中程序单元指的是gorotine
